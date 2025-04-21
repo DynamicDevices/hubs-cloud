@@ -1,0 +1,4 @@
+[submodule "community-edition/services/hubs"]
+	path = community-edition/services/hubs
+	url = https://github.com/DynamicDevices/hubs.git
+	branch = addons
