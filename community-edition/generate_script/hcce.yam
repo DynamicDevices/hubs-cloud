@@ -332,7 +332,8 @@ data:
     port = "<SMTP_PORT>"
     username = "<SMTP_USER>"
     password = "<SMTP_PASS>"
-
+    ssl = true
+    tls = false
     [ret."Elixir.Ret.Support"]
     slack_webhook_url = "<SLACK_WEBHOOK>"
 
