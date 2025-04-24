@@ -2,3 +2,9 @@
 	path = community-edition/services/hubs
 	url = https://github.com/DynamicDevices/hubs.git
 	branch = addons
+[submodule "community-edition/services/coturn"]
+	path = community-edition/services/coturn
+	url = https://github.com/DynamicDevices/coturn.git
+[submodule "community-edition/services/spoke"]
+	path = community-edition/services/spoke
+	url = https://github.com/DynamicDevices/Spoke.git
