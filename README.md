@@ -12,7 +12,7 @@ We're testing on a Raspberry Pi 5 with 8GB of RAM but this *should* work on a 4G
 
 ## Setup a 'vanilla' Raspberry Pi OS image
 
-Go through a standard imaging procedure such as using `rpi-imager` (link here)[https://www.raspberrypi.com/software] to install a standard **64-bit** Raspberry Pi desktop [image](https://www.raspberrypi.com/software/raspberry-pi-desktop) 
+Go through a standard imaging procedure such as using `rpi-imager` [link here](https://www.raspberrypi.com/software) to install a standard **64-bit** Raspberry Pi desktop [image](https://www.raspberrypi.com/software/raspberry-pi-desktop) 
 
 TIP: You can use `rpi-imager` to edit the image settings before writing to the Pi and you might want to put in a default WiFi SSID and password so you can easily connect, and also consider adding a public key for security if you are comfortable with these things.
 
