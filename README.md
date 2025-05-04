@@ -21,4 +21,4 @@ TIP: You can use `rpi-imager` to edit the image settings before writing to the P
 |Host Name | hubs-pi.local |
 |User | hubs |
 
-![image](https://github.com/user-attachments/assets/12640669-7824-4482-ba27-8260c56747a1)
+<img src="https://github.com/user-attachments/assets/12640669-7824-4482-ba27-8260c56747a1" width=50% />
