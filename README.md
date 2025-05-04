@@ -6,6 +6,12 @@ The intent is that this repository, and associated repositories, are temporary f
 
 It is understood that these changes could potentially break a lot of behaviours so we're very much looking for people who are interested in testing this out on Raspperry Pis, arm64, and amd64 platform architectures.
 
+# Oustanding Issues
+
+- We've had to disable WebRTC authentication in `coturn` and need to understand why inter-pod database lookups aren't working
+- The HTTP LetsEncrypt `certbotbot` process isn't always reliable
+- We should have some default media installed for users to get doing
+- 
 # Installation (Raspberry Pi 5)
 
 We're testing on a Raspberry Pi 5 with 8GB of RAM but this *should* work on a 4GB board and possibly even on a 2GB board variant.
