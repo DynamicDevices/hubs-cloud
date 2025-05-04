@@ -126,5 +126,67 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 ```
 
+The Docker container engine is now installed !!!
 
+### Install MiniKube (Kubernetes)
 
+Now you need to install [MiniKube](https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Farm64%2Fstable%2Fbinary+download) which is a Kubernetes implementation for 'local' development.
+
+Enter these commands
+
+```
+curl -LO https://github.com/kubernetes/minikube/releases/latest/download/minikube-linux-arm64
+sudo install minikube-linux-arm64 /usr/local/bin/minikube && rm minikube-linux-arm64
+```
+Check you can run the `minikube` command successfully.
+
+Start your cluster manually. We will automate this with a `systemd` service later on
+
+```
+minikube start
+```
+
+After a couple of minutes you should see something akin to
+
+```
+hubs@hubs-pi:~$ minikube start
+* minikube v1.35.0 on Raspbian 12.10 (arm64)
+* Automatically selected the docker driver. Other choices: none, ssh
+* Using Docker driver with root privileges
+* Starting "minikube" primary control-plane node in "minikube" cluster
+* Pulling base image v0.0.46 ...
+* Downloading Kubernetes v1.32.0 preload ...
+    > preloaded-images-k8s-v18-v1...:  314.92 MiB / 314.92 MiB  100.00% 10.95 M
+    > gcr.io/k8s-minikube/kicbase...:  452.84 MiB / 452.84 MiB  100.00% 9.10 Mi
+* Creating docker container (CPUs=2, Memory=2200MB) ...
+* Preparing Kubernetes v1.32.0 on Docker 27.4.1 ...
+  - Generating certificates and keys ...
+  - Booting up control plane ...
+  - Configuring RBAC rules ...
+* Configuring bridge CNI (Container Networking Interface) ...
+* Verifying Kubernetes components...
+  - Using image gcr.io/k8s-minikube/storage-provisioner:v5
+* Enabled addons: storage-provisioner, default-storageclass
+* kubectl not found. If you need it, try: 'minikube kubectl -- get pods -A'
+* Done! kubectl is now configured to use "minikube" cluster and "default" namespace by default
+```
+
+Next install `minikube` `kubectl` support with
+
+```
+minikube kubectl -- get po -A
+```
+
+We will be using the `kubectl` command extensively to interact with our new kubernetes cluster. The instructions linked to above talk about adding an `alias` to the shell but this doesn't work well with the Hubs scripts. Instead we will use a trick I learnt from (BusyBoxy)[https://busybox.net/] and symlink to the main `minikube` binary as follows
+
+```
+sudo ln -s /usr/local/bin/minikube /usr/local/bin/kubectl
+```
+
+Run up `kubectl` to test
+
+```
+kubectl get pods
+```
+
+The Kubernetes container orchestration engine is now installed !!!
